@@ -1,0 +1,91 @@
+.Header{
+    /* background-color: rgba(0, 0, 0, 0.3);    */
+    /* background-color: #14191b;  */
+    background-color: transparent;
+    color: aliceblue;    
+    position:sticky;
+    top: 0;
+    text-align: center;    
+    z-index: 100;
+}
+.inicio{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.inicio button{
+    background-color: transparent;
+    border: 0;
+    margin: 20px;
+    /* display: none; */
+}
+.links {
+    display: flex;
+    justify-content: right;     
+    align-items: center;  
+}
+.link{
+    display: flex;
+    justify-content: center;
+    margin: 25px;    
+}
+.link p{
+    margin: 5px;
+}
+
+
+.closeModal{
+    width: 100vw;
+    height: 100vh;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.triangulito{
+    width: 30px;
+    height: 30px;
+    background-color: #14191b;
+    position: absolute;
+    top: 68px;
+    left: 30px;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.menu{
+    width: 220px;
+    background-color: #14191b;     
+    position: absolute;
+    top: 60px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+.menu li{
+    padding: 20px;
+    color: aliceblue;
+    text-align: left;
+}
+.Header li:hover, .Header a:hover{
+    color: aqua;
+}
+
+.menu img{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    .links a{
+        margin: 15px;    
+    }
+    .link p{display: none;}
+}
+@media (prefers-color-scheme: white) {
+    .Header{
+        background-color: rgba(255, 255, 255, 0.2);
+        color: aliceblue;
+    }
+  }

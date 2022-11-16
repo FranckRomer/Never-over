@@ -1,0 +1,41 @@
+.body {
+    height: 100vh;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, #1c2425 0%, #4b555e 100%);
+}
+.main{
+    margin-top: 100px;
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+.titulo{
+    font-family: cursive;
+}
+.main label{
+    margin-right: 10px;
+}
+.main input{
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+}
+.user_contain, .pass_contain{
+    display: flex;
+    justify-content: center;
+    margin: 20px;    
+}
+.user_contain input{
+    width: 180px;
+    border-bottom: 1px solid gray;
+}
+.pass_contain input{
+    width: 165px;
+}
+.pass{
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+.main input:focus{
+    outline: none;    
+}
