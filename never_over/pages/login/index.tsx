@@ -4,79 +4,48 @@ import { useRouter } from 'next/router'
 import Header from '../../components/home/Header'
 import Image from 'next/image'
 import styles from '../../styles/home/Login.module.css'
+import Head from 'next/head'
+import { Login_component } from '../../components/login/login_component'
+import { Register_component } from '../../components/login/register_component'
 
 const LoginPage = () => {
-    const [Credencials, setCredencials] = React.useState({
-        email: '',
-        password: ''
-    })
-    const [ojo, setOjo] = useState(false)
-    const [typePass, setTypePass] = useState("password")
-
-    const router = useRouter()
-
-    const handleChange = (e: any) => {
-        setCredencials({
-            ...Credencials,
-            [e.target.name]: e.target.value
-        })
-    }
-
-    const handleSubmit = async (e: any) => {
-        e.preventDefault()
-        console.log(Credencials)
-        const response = await axios.post('../api/auth/login', Credencials)
-        console.log(response)
-
-        if (response.status === 200) {
-            router.push('../profile/dashboard')
-        }
-    }
-
-    const CambiarTypePass = () => {
-        setOjo(!ojo)
-        if (ojo) {
-            console.log(typePass);
-            setTypePass("password")
-        } else {
-            console.log(typePass);
-            setTypePass("text")
-        }
-    }
+    const [showLogin, setShowLogin] = useState(true)
 
     return (
         <div className={styles.body}>
+            <Head>
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet" />
+            </Head>
+
             <Header></Header>
 
-            <div className={styles.main}>            
-                <h1 className={styles.titulo}>Login</h1>
-                <form onSubmit={handleSubmit} className={styles.forms}>
-                    <div className={styles.user_contain}>
-                        <label ><Image src="/ico/userWhite.ico" alt='Menu' width={15} height={15} /> </label>
-                        <input
-                            name='username'
-                            type="text"
-                            placeholder='UserName'
-                            onChange={handleChange}
-                        />
-                    </div>
-                    <div className={styles.pass_contain}>
-                        <label><Image src="/ico/bloquearW.ico" alt='Menu' width={15} height={15} /></label>
-                        <div className={styles.pass}>
-                            <input
-                                name='password'
-                                type={typePass}
-                                placeholder='password'
-                                onChange={handleChange}
-                            />
-                            <div onClick={CambiarTypePass}>
-                                {ojo ? <Image src="/ico/ojoOnW.ico" alt='Menu' width={15} height={15} /> : <Image src="/ico/ojoOffW.ico" alt='Menu' width={15} height={15} />}
+            <div className={styles.main}>
+
+                <div className={styles.contain}>
+                    <div className={styles.login_register}>
+                        {showLogin ?
+                            <div className={styles.login_register}>
+                                <h1 className={styles.titulo1} onClick={() => { setShowLogin(true) }}>Login</h1>
+                                <h2 className={styles.titulo2} onClick={() => { setShowLogin(false) }}>Register</h2>
                             </div>
-                        </div>
+                            :
+                            <div className={styles.login_register}>
+                                <h2 className={styles.titulo2} onClick={() => { setShowLogin(true) }}>Login</h2>
+                                <h1 className={styles.titulo1} onClick={() => { setShowLogin(false) }}>Register</h1>
+                            </div>
+                        }
                     </div>
-                    <br />
-                    <button >Login</button>
-                </form>
+                    {showLogin
+                        ?
+                        <Login_component />
+                        :
+                        <Register_component/>
+                    }
+
+                </div>
+
             </div>
 
         </div>

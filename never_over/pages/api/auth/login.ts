@@ -13,7 +13,7 @@ export default function loginHandler(req: NextApiRequest, res:NextApiResponse) {
     
     // if password is correct
 
-    if (email == 'admin@admin.com' && password === 'admin') {
+    if (email == 'admin' && password === '123') {
         console.log("!!!!! CONFIRMED  !!!!!")
         const token = jwt.sign({
             exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 30),  //seg min hora dia
