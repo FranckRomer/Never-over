@@ -1,7 +1,7 @@
 .Header{
     /* background-color: rgba(0, 0, 0, 0.3);    */
-    /* background-color: #14191b;  */
-    background-color: transparent;
+    background-color: #14191b; 
+    /* background-color: transparent; */
     color: aliceblue;    
     position:sticky;
     top: 0;
@@ -14,6 +14,9 @@
     justify-content: space-between;
     align-items: center;    
 }
+.inicio h3{
+    color: aliceblue;
+}
 .inicio button{
     background-color: transparent;
     border: 0;
@@ -24,6 +27,8 @@
     display: flex;
     justify-content: right;     
     align-items: center;  
+    color: aliceblue;
+    border: 1px solid aliceblue;
 }
 .link{
     display: flex;
@@ -33,8 +38,15 @@
 .link p{
     margin: 5px;
 }
+.hamburguesa, .notificaciones{
+    padding: 20px;
+    border-radius: 50%;
+}
+.hamburguesa:hover, .notificaciones:hover{
+    background-color: #F2496A;
+}
 
-
+/* ---------------------- */
 .closeModal{
     width: 100vw;
     height: 100vh;
@@ -45,33 +57,48 @@
     left: 0;
     z-index: 1;
 }
+.hamburguesa2{
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #F2496A;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
 .triangulito{
     width: 30px;
     height: 30px;
     background-color: #14191b;
     position: absolute;
     top: 68px;
-    left: 30px;
+    right: 30px;
     border-radius: 5px;
     transform: rotate(45deg);
+    border: 1px solid aliceblue;
     z-index: 1;
 }
 .menu{
+    padding: 0;
     width: 220px;
     background-color: #14191b;     
     position: absolute;
     top: 60px;
+    right: 10px;
+    border: 1px solid aliceblue;
     border-radius: 10px;
     z-index: 1000;
 }
 .menu li{
+    margin-left: 20px;
     padding: 20px;
     color: aliceblue;
     text-align: left;
 }
 .Header li:hover, .Header a:hover{
-    color: aqua;
+    color: #30BBF2;
+    /* border-bottom: 1px solid aliceblue; */
 }
+
 
 .menu img{
     margin-right: 10px;
@@ -83,9 +110,9 @@
     }
     .link p{display: none;}
 }
-@media (prefers-color-scheme: white) {
+/* @media (prefers-color-scheme: white) {
     .Header{
         background-color: rgba(255, 255, 255, 0.2);
         color: aliceblue;
     }
-  }
+  } */

@@ -6,19 +6,19 @@ import { NextApiRequest, NextApiResponse } from "next"
 
 export default function loginHandler(req: NextApiRequest, res:NextApiResponse) {
     console.log(req.body)
-    const { email, password } = req.body
+    const { username, password } = req.body
     // check if email and password are valid
 
     // if email exists, check if password is correct
     
     // if password is correct
 
-    if (email == 'admin' && password === '123') {
+    if (username == 'admin' && password === '123') {
         console.log("!!!!! CONFIRMED  !!!!!")
         const token = jwt.sign({
             exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 30),  //seg min hora dia
-            email: 'admin@admin.com',
-            username: 'franck'
+            username: username,
+            correo: 'franck'
         }, "secret")
 
         const serialized = cookie.serialize('myTokenName', token, {

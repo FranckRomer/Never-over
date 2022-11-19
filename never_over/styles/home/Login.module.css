@@ -1,18 +1,18 @@
 .body {
-    height: 100vh;
-
+    height: auto;
 }
 
 .main {
-    margin-top: 100px;
+    margin-top: 10px;
+    padding-bottom: 200px;
     display: flex;
     justify-content: center;
     text-align: center;
-
 }
 .contain{
     width: 220px;
     display: block;
+    padding-bottom: 20px;
 }
 .login_register{    
     display: flex;

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import Header from '../../components/home/Header'
+import Header from '../../../components/home/Header'
 
 function Dashboard() {
     const [user, setUser] = useState({
