@@ -16,16 +16,45 @@ export default function Home() {
       <Header></Header>
 
       <main className={styles.main}>
-        {/* <h1>Data</h1>
-        <span className={styles.logo}>
-          
-        </span> */}
-        <Image src="/fondos/fondoCodigo.png" alt="codigo" width={800} height={520} />
-        <h1>Never-Over</h1>
-        <p>Tienes un proyecto en mente, necesitas una pagina web, quieres desarrollar una aplicacion o automatizar algun dispositivo?</p>
-        <p></p>
-        <Link href="/about" className={styles.linkMenu}><li><Image src="/ico/contactUsWhite.ico" alt='Notificaciones' width={20} height={20} /> About Us</li></Link>
+        {/* ---------------- */}
+        <section className={styles.welcome}>
+          <div className={styles.fondo}>
+            <h1><Link href="/home/about">Never-Over</Link></h1>
 
+          </div>
+        </section>
+
+        {/* ---------------- */}
+        <section className={styles.proyects}>
+          <h1>Proyects</h1>
+        </section>
+
+        {/* ---------------- */}
+        <section className={styles.descripcion}>
+          <h1>Nunca se finalizo algun...</h1>
+          <ul>
+            <li>Proyecto personal</li>
+            <li>Pagina web</li>
+            <li>Automatizacion de algun dispositivo</li>
+          </ul>
+          <hr />
+          {/* <Image src="/logoWhite.png" alt="Vercel Logo" width={220} height={220} /> */}
+          <p>¿Tienes un proyecto en mente, necesitas una pagina web, quieres desarrollar una aplicacion o automatizar algun dispositivo?</p>
+          <button>
+            <Link href="/home/about" className={styles.linkMenu}>Contact Me</Link>
+          </button>
+        </section>
+
+
+        {/* ---------------- */}
+        {/* <div className={styles.proyects}>
+          <Link href="/" className={styles.proyect}> 
+            <div>
+              <h1>Never-Money</h1>
+            </div>
+          </Link>
+        
+        </div> */}
       </main>
 
       <footer className={styles.footer}>

@@ -23,8 +23,6 @@ const LoginPage = () => {
 
             <div className={styles.main}>
 
-                
-
                 <div className={styles.contain}>
                     <Image src="/logoWhite.png" alt="Vercel Logo" width={220} height={220} />
                     <div className={styles.login_register}>
