@@ -17,18 +17,23 @@ export default function Home() {
 
       <main className={styles.main}>
         {/* ---------------- */}
-        <section className={styles.welcome}>
-          <div className={styles.fondo}>
-            <h1><Link href="/home/about">Never-Over</Link></h1>
+        <div className={styles.welcome}>
+          {/* ---------------- */}
+          <section className={styles.fondoContain}>
+            <div className={styles.fondo}>
+              <h1><Link href="/home/about">Never-Over</Link></h1>
+            </div>
+          </section>
+          {/* ---------------- */}
+          <section className={styles.proyects}>
+            <h1>Proyects</h1>
 
-          </div>
-        </section>
+            <Link href="/proyets/never-money" className={styles.linkMenu}>
+              <button>Never-Money</button>
+            </Link>
 
-        {/* ---------------- */}
-        <section className={styles.proyects}>
-          <h1>Proyects</h1>
-        </section>
-
+          </section>
+        </div>
         {/* ---------------- */}
         <section className={styles.descripcion}>
           <h1>Nunca se finalizo algun...</h1>
@@ -37,24 +42,21 @@ export default function Home() {
             <li>Pagina web</li>
             <li>Automatizacion de algun dispositivo</li>
           </ul>
+          <div className={styles.proyectoSinAcabar}>
+            <Link href="/home/about" className={styles.linkMenu}>
+              <Image src="/image/cohete.png" alt="Vercel Logo" width={180} height={180} />
+            </Link>
+          </div>
           <hr />
           {/* <Image src="/logoWhite.png" alt="Vercel Logo" width={220} height={220} /> */}
           <p>¿Tienes un proyecto en mente, necesitas una pagina web, quieres desarrollar una aplicacion o automatizar algun dispositivo?</p>
-          <button>
-            <Link href="/home/about" className={styles.linkMenu}>Contact Me</Link>
-          </button>
+          
+            <Link href="/home/about" className={styles.linkMenu}>
+              <button>Contact Me</button>
+            </Link>
+          
         </section>
 
-
-        {/* ---------------- */}
-        {/* <div className={styles.proyects}>
-          <Link href="/" className={styles.proyect}> 
-            <div>
-              <h1>Never-Money</h1>
-            </div>
-          </Link>
-        
-        </div> */}
       </main>
 
       <footer className={styles.footer}>
