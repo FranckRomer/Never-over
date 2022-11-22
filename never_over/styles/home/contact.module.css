@@ -1,0 +1,12 @@
+.body{
+    height: 100vh;
+}
+.contact{
+    margin: 3% 20% 0 20%;
+    display: grid;
+    grid-template-columns: 60% 10% 30%;
+}
+.formulario form{
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+}

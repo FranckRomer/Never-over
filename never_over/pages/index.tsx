@@ -68,7 +68,7 @@ export default function Home() {
 
           <p>¿Tienes un proyecto en mente, necesitas una pagina web, quieres desarrollar una aplicacion o automatizar algun dispositivo?</p>
 
-          <Link href="/home/about" className={styles.linkMenu}>
+          <Link href="/home/contact" className={styles.linkMenu}>
             <button>Contact Me</button>
           </Link>
 

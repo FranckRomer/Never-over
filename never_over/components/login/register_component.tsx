@@ -91,7 +91,7 @@ function Register_component() {
                         <input
                             name='correo'
                             type={typePass}
-                            placeholder='correo'
+                            placeholder='Email'
                             onChange={handleChange}
                         />
                         
