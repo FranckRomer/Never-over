@@ -3,7 +3,9 @@
     grid-template-columns: 75% 25%;
     grid-template-rows: 100vh auto;
 }
-
+/* .welcome{
+    background-color: black;
+} */
 .fondoContain {
     /* height: 100vh ;
      */
@@ -44,7 +46,7 @@
     justify-content: center;
     padding: 10px;
     margin-top: 0px;
-    /* border: 1px solid aliceblue; */
+    border-left: 1px solid aliceblue;
 }
 .descripcion ul{
     padding: 20;
@@ -64,27 +66,73 @@
     margin-top: 20px;
     cursor: pointer;
 }
-.proyects button{
-    width: 200px;
+.proyects{
+    border-top: 1px solid aliceblue;
+}
+.proyects h1{
+    margin-left: 36px;
+    font-weight: bolder;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    
+}
+.proyects_contain{
+    display: grid;
+    grid-template-columns: 33%  33% 33%;
+    align-items: center;
+    justify-content: center;
+    /* margin: 33px; */
+}
+.proyect{
     height: 200px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.proyect_money{
+    width: 100%;
+    background-image: url("../../public/fondos/fondoMoney.jpg");
+}
+.proyect_time{
+    width: 100%;
+    background-image: url("../../public/fondos/fondoTime.jpg");
+}
+.proyect_more{
+    width: 100%;
+    background-image: url("../../public/fondos/fondoCodigo.png");
+}
+.proyect button{
+    width: 100%;
+    height: 100%;
     border: 0;
-    border-radius: 50%;
-    background-color: #F2E718;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
     font-size: 24px;
-    margin-top: 20px;
+    text-align: center;
     cursor: pointer;
+    font-weight: bold;
+    transition: background-color 2s ;
+}
+.proyect button:hover{
+    /* transition: background-color 2s; */
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 
 @media screen and (max-width: 480px) {
     .descripcion {
         width: auto;
+        border: 0;
+        border-top: 1px solid aliceblue;
+        margin-top: 20px;
     }
     .main{
         display: block;
     }
     .proyectoSinAcabar{
         display: none;
+    }
+    .proyect button{
+        font-size: 20px;
     }
 }
